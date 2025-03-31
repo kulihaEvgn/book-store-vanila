@@ -1,0 +1,29 @@
+.card_list_content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 50vh;
+}
+
+.card_list_content__title {
+  font-family: Open Sans, sans-serif;
+}
+
+.card_list_content__loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card_list_content__list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+

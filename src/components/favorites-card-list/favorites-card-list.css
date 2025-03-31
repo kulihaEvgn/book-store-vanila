@@ -1,0 +1,14 @@
+.favorites_cards__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.favorites_cards__title{}
+
+.favorites_cards__list_container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,37 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+}
+.menu__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--black);
+  position: relative;
+  font-size: 14px;
+  line-height: 20px;
+}
+.menu__item:hover {
+  text-decoration: underline;
+}
+.menu__item:visited {
+  color: var(--black);
+}
+.menu__counter{
+  position: absolute;
+  top: 0;
+  right: -15px;
+  opacity: .6;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+}

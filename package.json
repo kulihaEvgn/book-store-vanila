@@ -1,0 +1,26 @@
+{
+  "name": "book-shop",
+  "version": "1.0.0",
+  "description": "this is book shop on vanila js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c --watch",
+    "dev": "live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "eslint": "^9.23.0",
+    "globals": "^16.0.0",
+    "live-server": "^1.2.2",
+    "rollup": "^4.37.0",
+    "rollup-plugin-import-css": "^3.5.8",
+    "serve": "^14.2.4"
+  },
+  "dependencies": {
+    "on-change": "^5.0.1"
+  }
+}
