@@ -3,6 +3,7 @@ import onChange from "on-change";
 import { Header } from "../../components/header/header.js";
 import { Search } from "../../components/search/search.js";
 import { CardList } from "../../components/card-list/card-list.js";
+import { BookService } from "../../services/bookService.js";
 
 export class MainView extends AbstractView {
   state = {
@@ -11,6 +12,7 @@ export class MainView extends AbstractView {
     isLoading: false,
     searchQuery: '',
     offset: 0,
+    limit: 21,
   };
 
   constructor(appState) {
@@ -31,9 +33,9 @@ export class MainView extends AbstractView {
   stateHooks = async (path) => {
     if (path === 'searchQuery') {
       this.state.isLoading = true;
-      const data = await this.loadList(this.state.searchQuery, this.state.offset);
-      this.state.list = data.docs ?? []
-      this.state.booksCount = data.numFound;
+      const data = await new BookService().getBooks(this.state.searchQuery, this.state.offset, this.state.limit);
+      this.state.list = data?.docs ?? []
+      this.state.booksCount = data?.numFound ?? 0;
       this.state.isLoading = false;
     }
     if (path === 'isLoading' || path === 'list') {
@@ -41,15 +43,6 @@ export class MainView extends AbstractView {
     }
   };
 
-  loadList = async (query, offset) => {
-    try {
-      const res = await fetch(`https://openlibrary.org/search.json?q=${query}&offset=${offset}`);
-      return res.json();
-    } catch (e) {
-      console.error(e);
-    }
-
-  }
 
   render() {
     const main = document.createElement("main");

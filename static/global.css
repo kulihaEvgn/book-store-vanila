@@ -12,6 +12,19 @@ body {
   height: 98vh;
   margin: 0 auto;
   box-sizing: border-box;
+
+  *::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--black);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--white);
+    border-radius: 10px;
+  }
 }
 #root{
   width: 100%;

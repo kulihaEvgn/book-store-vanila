@@ -33,7 +33,7 @@ export class CardList extends DivComponent {
     } else {
       cardListContainer.innerHTML = '';
 
-      for (const card of this.parentState.list.slice(0, 6)) {
+      for (const card of this.parentState.list) {
         cardListContainer.append(new Card(this.appState, card).render());
       }
     }

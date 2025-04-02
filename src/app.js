@@ -19,9 +19,6 @@ class App {
 
     const path = window.location.hash;
     const view = this.routes.find(r => r.path === path)?.view;
-    console.log('view', view)
-    console.log('path', path)
-    console.log('path', path)
 
     if (!view) {
       const notFound = new NotFound();
